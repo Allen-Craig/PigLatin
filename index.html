@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <body>
+      <div class="wrapper">
+        <h1>Pig Latin Translator</h1>
+
+        <div class="container">
+          <div>
+            <label for="english">Enter English Word:</label>
+            <textarea
+              id="inputText"
+              name="english"
+              onkeypress="process(event, this)"
+            ></textarea>
+          </div>
+          <button id="tButton">Translate</button>
+          <div>
+            <label for="pigLatin">Pig Latin Translation:</label>
+            <textarea id="outputText" name="pigLatin"></textarea>
+          </div>
+        </div>
+      </div>
+      <script src="pigLatin.js"></script>
+    </body>
+  </body>
+</html>
