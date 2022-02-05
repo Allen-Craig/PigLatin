@@ -11,7 +11,7 @@ function translatePigLatin(str) {
   const punc = [".", "?", "!", ",", '"', "'"];
 
   //split the sentence into an array of words
-  let sentence = str.split(/(?=[!?.,])|[_-\s]/).filter((x) => x); 
+  let sentence = str.split(/(?=[!?.,])|[_-\s]/).filter((x) => x);
   let result = [];
 
   //iterate through sentence array and translate each word
@@ -28,11 +28,11 @@ function translatePigLatin(str) {
       firstLetter = "vowel";
     }
 
-    //switch statement for handling different word starts
+    //switch statement
     switch (firstLetter) {
-      case "punc": 
+      case "punc":
         break;
-      case "vowel": 
+      case "vowel":
         if (/[aeiouAEIOU]/.test(arr)) {
           while (vowels.indexOf(arr[0].charAt(0)) == -1) {
             arr.push(arr.shift().toLowerCase());
@@ -51,14 +51,11 @@ function translatePigLatin(str) {
         break;
     }
 
-
     result.push(arr.join(""));
   }
 
-
   return result.join(" ").replace(/\s([?.!,])/gi, "$1");
 }
-
 
 let tButton = document.getElementById("tButton");
 tButton.onclick = function () {
@@ -66,7 +63,6 @@ tButton.onclick = function () {
   var outputText = (document.getElementById("outputText").value =
     translatePigLatin(inputText));
 };
-
 
 function process(e) {
   let code = e.keyCode ? e.keyCode : e.which;
