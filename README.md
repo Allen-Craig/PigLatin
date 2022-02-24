@@ -1,2 +1,2 @@
 # PigLatin
-A simple PigLatin App using JavaScript and HTML
+A simple PigLatin App using JavaScript and HTML.
